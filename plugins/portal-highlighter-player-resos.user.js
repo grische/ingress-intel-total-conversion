@@ -1,7 +1,7 @@
 // ==UserScript==
 // @id             iitc-plugin-players-resonator-highlighter
 // @name           IITC plugin: Highlight Player Resonators
-// @version        0.1.5.20130902.80209
+// @version        0.1.5.20130902.80212
 // @description    [jonatkins-test-2013-09-02-080204] The plugins finds the resonators of a given player. The input is in the sidebar.
 // @include        https://www.ingress.com/intel*
 // @include        http://www.ingress.com/intel*
@@ -45,7 +45,9 @@ window.plugin.playersResonatorHighlighter.findReso = function(playername) {
               if (!effectiveNick) {
                 effectiveNick = nick;              
               }
-              portalCounter += 1;
+              if ( resoCounter == 1 ) {
+                portalCounter += 1;
+              }
           }
       });
       
